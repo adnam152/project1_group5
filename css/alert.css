@@ -1,0 +1,84 @@
+
+#alert{
+    position: fixed;
+    z-index: 11;
+    right: 20px;
+    top: 20px;
+}
+#alert .toast{
+    width: 500px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    user-select: none;
+    transform-origin: right;
+    animation: toast 2.5s ease-in-out forwards;
+    background-color: rgb(241, 255, 252);
+}
+@keyframes toast{
+    from{
+        transform: translateX(calc(100% + 20px));
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+        transform: none;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#alert .toast:hover{
+    transform: scale(1.05);
+}
+#alert .toast + .toast{
+    margin: 10px 0;
+}
+#alert .toast .icon{
+    border-radius: 50%;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#alert .toast .message{
+    flex: auto;
+    margin: 0 15px;
+}
+#alert .toast .message .title{
+    font-weight: bold;
+    font-size: 18px;
+}
+#alert .toast .message p{
+    padding-left: 5px;
+    margin-top: 10px;
+}
+#alert .toast .close{
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+#alert .toast--Success{
+    border-left: 7px solid rgb(3, 199, 3);
+}
+#alert .toast--Success .icon{
+    background-color: rgb(3, 199, 3);
+}
+#alert .toast--Fail{
+    border-left: 7px solid red;
+}
+#alert .toast--Fail .icon{
+    background-color: red;
+}
+#alert .toast--Adding{
+    border-left: 7px solid blue;
+}
+#alert .toast--Adding .icon{
+    background-color: blue;
+}

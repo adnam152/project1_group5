@@ -1,0 +1,70 @@
+
+footer {
+    font-family: tuffy;
+}
+
+footer .container-social {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bl);
+    padding: 30px 0;
+}
+
+footer .container-social a {
+    font-size: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+}
+
+footer .container-list {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 50px auto;
+}
+
+footer .footer-list-item {
+    max-width: 300px;
+}
+
+footer .container-list .title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+footer p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer input,
+button {
+    padding: 7px 12px;
+}
+
+.container-pay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 50px;
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+
+.container-pay .title {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.cpyright {
+    display: flex;
+    width: 90%;
+    margin: 0 auto 100px;
+    justify-content: space-between;
+}
+
+.cpyright img {
+    width: 100px;
+}

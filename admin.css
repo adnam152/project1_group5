@@ -1,0 +1,106 @@
+*{
+    user-select: none;
+}
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+nav#changeOptions{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    padding: 3px 5px;
+    cursor: pointer;
+}
+#admin-page i{
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: underline;
+}
+#admin-page .visitWeb{
+    padding: 10px 30px;
+    background-color: var(--bl);
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    left: 50px;
+    top: 10px;
+}
+.admin_add{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px 10px;
+    width: max-content;
+    margin: 5px auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+#admin_add_btn{
+    background-color: rgb(63, 173, 4);
+    color: white;
+}
+.admin_add input, .admin_add #admin_add_btn{
+    padding: 5px 12px;
+    outline: none;
+}
+.admin_add input[type="file"]{
+    padding-left: 0;
+    width: 100%;
+}
+.admin_table th{
+    width: 90px;
+}
+.admin_table th, .admin_table td{
+    padding: 5px 12px;
+    text-align: center;
+    word-break:keep-all;
+}
+.admin_table tr>th:first-child{
+    width: max-content;
+    text-align: center;
+}
+.admin_table tr th:nth-child(2), .admin_table tr th:nth-child(7){
+    width: 120px;
+    display: flexbox;
+    word-wrap: break-word;
+}
+.admin_table tr th:nth-child(5), .admin_table tr td:nth-child(5), .admin_table tr th:nth-child(6), .admin_table tr td:nth-child(6){
+    width: 300px;
+    word-break: break-all;
+}
+.admin_table tr td:nth-child(5){
+    text-align: unset;
+}
+
+.admin_table input{
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    color: blue;
+}
+button.delete{
+    background-color: rgb(213, 0, 0);
+    color:  white;
+    width: 100%;
+}
+.admin_table p+img{
+    margin-top: 10px;
+}
+.admin_table img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.admin_table img+p{
+    display: inline-block;
+    word-break: keep-all;
+    width: 200px;
+    overflow-x: hidden;
+}

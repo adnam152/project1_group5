@@ -1,0 +1,53 @@
+
+.content2 .bg1,
+.content2 .bg2 {
+    font-family: tuffy;
+    position: relative;
+    overflow: hidden;
+}
+
+.content2 .bg1>img {
+    filter: brightness(105%);
+}
+
+.content2 .list-item-container {
+    height: max-content;
+    position: relative;
+    z-index: 1;
+    padding: 70px 0;
+}
+
+.main-content.img-background {
+    margin: 0;
+    margin-bottom: 100px;
+}
+
+.main-content.img-background .grid-center {
+    width: unset;
+    padding-right: 50px;
+}
+
+.main-content.img-background button {
+    width: max-content;
+    height: max-content;
+    align-self: end;
+    justify-self: end;
+}
+
+.content2 .bg1 >img, .content2 .bg2 >img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.03s;
+}
+
+.content2 .bg2 {
+    height: 100vh;
+}
+
+.content2 .bg2 img {
+    filter: brightness(80%);
+    height: 110%;
+    object-position: top;
+}

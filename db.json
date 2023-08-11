@@ -1,0 +1,220 @@
+{
+  "products": [
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441185/Workshop1/qkmvqyuslyhh67barlcs.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441186/Workshop1/ecpgjmv6puxdtpgwvvti.webp"
+      ],
+      "name": "Straight Leg Jean",
+      "price": "$99.00",
+      "category": "sell",
+      "description": "",
+      "id": "77c87cff-7ad6-42bf-9bfa-06658d1a03a5"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441240/Workshop1/t8zweqwszuj9p409xfpd.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441242/Workshop1/ljykew325kpth4cd8yfo.webp"
+      ],
+      "name": "Rose Patch",
+      "price": "$10.00",
+      "category": "sell",
+      "description": "",
+      "id": "27a6d326-0652-4240-8b85-b18dd783108a"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441303/Workshop1/akl73vn6za7ir7gsmct9.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441304/Workshop1/uwuzqaxbn1pvqlvzmmus.webp"
+      ],
+      "name": "Deni Vest",
+      "price": "$45.00",
+      "category": "sell",
+      "description": "",
+      "id": "7f4227a5-b803-4213-bdda-baf53876016c"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441502/Workshop1/edh8gu0f6zeuqxqklbzc.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441503/Workshop1/k6twlfa2p0z2htr2m9z3.webp"
+      ],
+      "name": "Straight Cut Jean",
+      "price": "$99.00",
+      "category": "sell",
+      "description": "",
+      "id": "0ee19e1a-6970-4a35-b413-439567298e8a"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441544/Workshop1/k1tju22d5xvc98i8loud.webp"
+      ],
+      "name": "Deni Bag",
+      "price": "$15.00",
+      "category": "sell",
+      "description": "",
+      "id": "79b5025e-2754-46a3-8fd4-44a52913e12f"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441580/Workshop1/r2aktxbtnd1ptokftson.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441581/Workshop1/odfbvnqbghuqxu6rpt6r.webp"
+      ],
+      "name": "Oversized Jacket",
+      "price": "$65.00",
+      "category": "sell",
+      "description": "",
+      "id": "5b118cbd-0344-4405-8c4f-1ce406450190"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441681/Workshop1/rsqbs1ubuydylmbgt4ug.webp"
+      ],
+      "name": "Tapered Shorts",
+      "price": "$45.00",
+      "category": "new",
+      "description": "",
+      "id": "ab8dee1d-c672-4a27-a317-53c6865dcb8e"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441719/Workshop1/cgxdratbdpixalcradvw.webp"
+      ],
+      "name": "Distressed Middies",
+      "price": "$45.00",
+      "category": "new-label",
+      "description": "",
+      "id": "e61fbe34-39e5-4fee-8e38-365883ad7b66"
+    },
+    {
+      "galeryImage": [
+        "https://static.wixstatic.com/media/c837a6_0fad758217904fe6821e6c47aaf75063~mv2.jpg/v1/fill/w_181,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_0fad758217904fe6821e6c47aaf75063~mv2.jpg",
+        "https://static.wixstatic.com/media/c837a6_c3d1680bbcde404ba524c42c6240be0e~mv2.jpg/v1/fill/w_181,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_c3d1680bbcde404ba524c42c6240be0e~mv2.jpg"
+      ],
+      "name": "Straight Leg Shorts",
+      "price": "$45.00",
+      "category": "new-label",
+      "description": "",
+      "id": "b69e7476-91d2-4bf7-9447-f82ba5e55796"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441814/Workshop1/e13hdix7iyzshvrmjp4k.webp"
+      ],
+      "name": "Tapered Shorts",
+      "price": "$45.00",
+      "category": "new",
+      "description": "",
+      "id": "dcf36a61-58fc-478b-ba39-14e2680aa242"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441837/Workshop1/pwizlclbtgezxjkivy7u.webp"
+      ],
+      "name": "Short Shorties",
+      "price": "$45.00",
+      "category": "new-label",
+      "description": "",
+      "id": "6e5a4c0b-74c4-411a-b4ce-96c598c67ee2"
+    },
+    {
+      "galeryImage": [
+        "https://static.wixstatic.com/media/c837a6_099b7f0fec7c4048a23333061877b60e~mv2.jpg/v1/fill/w_181,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_099b7f0fec7c4048a23333061877b60e~mv2.jpg",
+        "https://static.wixstatic.com/media/c837a6_4ccabd59572f4a81b3c20e7ef06dc1cd~mv2.jpg/v1/fill/w_181,h_243,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_4ccabd59572f4a81b3c20e7ef06dc1cd~mv2.jpg"
+      ],
+      "name": "Mom Shorts",
+      "price": "$45.00",
+      "category": "new",
+      "description": "",
+      "id": "73a6e8d1-5951-4c53-995d-db9dafe7a98b"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442546/Workshop1/nndyxi7cfp76yrlqsi3z.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442549/Workshop1/zg5ibw9opyfj7hmvbogp.webp"
+      ],
+      "name": "Banner",
+      "price": "",
+      "category": "banner",
+      "description": "",
+      "id": "57636378-cc87-4057-b5bf-6e999cc7c48b"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442622/Workshop1/u9qvgffkdnrxdj8norzo.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442627/Workshop1/jcrt9cc7fsonmveqe1zr.webp"
+      ],
+      "name": "Background Content 2",
+      "price": "",
+      "category": "background",
+      "description": "",
+      "id": "0f42552a-e371-4c6d-a2a3-269c248e9605"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442677/Workshop1/c56rhdxhfzoq2nfe3pdo.webp"
+      ],
+      "name": "Banner-sun",
+      "price": "",
+      "category": "banner",
+      "description": "",
+      "id": "82939e7f-0b32-4864-b0c4-9a911a33dba7"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442788/Workshop1/jpolcli8efrha2ohyhtf.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442787/Workshop1/tsygcbsg3qjnmqnzxo5u.webp"
+      ],
+      "name": "Content1-Img",
+      "price": "",
+      "category": "content-img",
+      "description": "",
+      "id": "c644cc06-2819-43e2-920c-98b9c10faa6b"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442802/Workshop1/cla0rpvz9fsuxfx4ym7c.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442803/Workshop1/p73ghnbiznnsbp9tilew.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690442804/Workshop1/ke2keta3zug380qouxfb.webp"
+      ],
+      "name": "Slide-Img",
+      "price": "",
+      "category": "slide-img",
+      "description": "",
+      "id": "16c7160c-5349-4c8f-bf95-95eee2d21c36"
+    },
+    {
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690457273/Workshop1/cggs7ghyurht2mycudhp.png"
+      ],
+      "name": "logo",
+      "price": "",
+      "category": "logo",
+      "description": "",
+      "id": "53d58a48-28c5-42a7-83c4-1f927d7a9c7f"
+    },
+    {
+      "id": "3e10435b-46e1-4368-97e8-9ef14ca27853",
+      "galeryImage": [
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690888778/Workshop1/n2r71bndgsrttfgzmo6z.webp"
+      ],
+      "name": "Form Image",
+      "price": "",
+      "category": "form",
+      "description": ""
+    }
+  ],
+  "users": [
+    {
+      "id": "4c747da4-4eb9-41eb-9028-1d8cb14e8a1a",
+      "username": "administrator",
+      "email": "teddy.nam152@gmail.com",
+      "password": "admin123"
+    },
+    {
+      "id": "4f191302-2836-4380-b4ea-ba62e8d8880e",
+      "username": "adnam123",
+      "email": "teddy.nam152@gmail.com",
+      "password": "adnam123"
+    }
+  ]
+}
