@@ -13,12 +13,16 @@ export default function productsDetailPage(data) {
 
     return `
     <div id="product_detail">
-        ${connectData(loginForm)}
-        ${connectData(header)}
-        
+        ${connectData(loginForm,{
+            name : 'Form Image'
+        })}
+        ${connectData(header,{
+            category: 'logo'
+        })}
         ${connectData(()=>component_ProductDetail(data))}
-
-        ${connectData(footer)}
+        ${connectData(footer,{
+                category: 'logo'
+            })}
     </div>
     `
 }
