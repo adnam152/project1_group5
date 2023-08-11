@@ -10,7 +10,7 @@ import connectData from "./data/connectdata";
 
 axios.defaults.baseURL = API_products;
 
-router.on('/', () => () => render(app, productsPage));
+router.on('/', () => render(app, homepage));
 router.on('/products', () => render(app, productsPage));
 router.on('/admin', () => render(app, adminPage));
 router.notFound(() => render(app, notFoundPage));
