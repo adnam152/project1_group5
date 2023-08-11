@@ -2,8 +2,11 @@
     "redirects": [
         {
             "source": "/",
-            "destination": "/",
-            "permanent": false
+            "destination": "/"
+        },
+        {
+            "source": "/products",
+            "destination": "/products"
         }
     ]
 }
