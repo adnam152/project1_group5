@@ -7,8 +7,7 @@ export default function header(data) {
         const link = logo.galeryImage[0];
         const logoImg = document.querySelector('.header_logo img');
         logoImg.src = link;
-        document.querySelector('link[rel="icon"]').href = link;
-        // Login Form
+        // Login Formasd
         if (!currentUser) {
             const userBtn = document.querySelector('header .header_left_Log-in .unloged');
             const formContainer = document.querySelector('#form-modal');
