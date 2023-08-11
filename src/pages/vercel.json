@@ -1,12 +1,8 @@
 {
-    "redirects": [
+    "rewrites": [
         {
-            "source": "/",
-            "destination": "/"
-        },
-        {
-            "source": "/products",
-            "destination": "/products"
+            "source": "/products/:id",
+            "destination": "products/:id"
         }
     ]
 }
