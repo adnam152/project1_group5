@@ -1,8 +1,16 @@
 {
-    "rewrites": [
+    "routes": [
         {
-            "source": "/products/:id",
-            "destination": "products/:id"
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/products",
+            "dest": "/"
+        },
+        {
+            "src": "/tos",
+            "dest": "/"
         }
     ]
 }
