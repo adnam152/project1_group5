@@ -17,7 +17,7 @@ export default function login(){
                 username: user.username
             })
             if(user.username == 'administrator'){
-                location.href = 'http://localhost:5173/admin';
+                location.href = '/admin';
             }else location.reload();
         }
         else{
