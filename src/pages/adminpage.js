@@ -37,6 +37,7 @@ export default function adminPage() {
                                     .join('')}</td>
                                 <td class="product-description" data-type="description" data-id = "${item.id}">${item.description}</td>
                                 <td class="product-category" data-type="category" data-id = "${item.id}">${item.category}</td>
+                                <td class="product-status" data-type="status" data-id = "${item.id}">${item.status}</td>
                                 <td>
                                     <button class="delete" data-id = "${item.id}">Delete</button>
                                 </td>
@@ -174,6 +175,7 @@ export default function adminPage() {
                         <th>Link image</th>
                         <th>Description</th>
                         <th>Category</th>
+                        <th>Status</th>
                         <th></th>
                     </tr>
                 </thead>
