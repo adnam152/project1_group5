@@ -27,13 +27,15 @@
     padding-right: 50px;
 }
 
-.main-content.img-background button {
+.main-content.img-background a {
     width: max-content;
     height: max-content;
     align-self: end;
     justify-self: end;
 }
-
+.main-content.img-background a button{
+    margin-top: 0;
+}
 .content2 .bg1 >img, .content2 .bg2 >img {
     position: absolute;
     height: 100%;

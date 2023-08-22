@@ -1,9 +1,13 @@
+import getData from "@/API/getdata";
 import login from "@/API/login";
 import register from "@/API/register";
 
-export default function loginForm(data) {
+export default function loginForm() {
     (async () => {
-        const [linkImg] = await data;
+        const GET_img = await getData({
+            category: 'form'
+        })
+        const [linkImg] = GET_img;
 
         const regBtn = document.getElementById('reg');
         const logBtn = document.getElementById('log');

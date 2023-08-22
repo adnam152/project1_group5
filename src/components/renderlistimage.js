@@ -1,11 +1,11 @@
-export default function home_RenderListImage(data_list, container) {
+export default function renderListImage(data_list, container) {
     // render List
     (() => {
         const component = data_list.map((data, index) => {
             return `
-                <a href="/products/${data.id}" class="item" data-index = "${index}">
-                    ${data.category == 'sell' ? `<div class="label">Best Seller</div>`:''}
-                    ${data.category == 'new-label' ? `<div class="label">New Arrivel</div>`:''}
+                <a href="/products/${data.id}" class="product" data-index = "${index}">
+                    ${data.status == 'sale' ? `<div class="label">Best Seller</div>`:''}
+                    ${data.status == 'new arrival' ? `<div class="label">New Arrivel</div>`:''}
                     <img src="${data.galeryImage[0]}" alt="">
                     <div class="name">${data.name}</div>
                     <div class="price">${data.price}</div>
@@ -16,7 +16,7 @@ export default function home_RenderListImage(data_list, container) {
     })();
     // Hover
     (() => {
-        const allItem = container.querySelectorAll('.item');
+        const allItem = container.querySelectorAll('.product');
         allItem.forEach(item => {
             let index = item.getAttribute('data-index');
             let image = item.querySelector('img');

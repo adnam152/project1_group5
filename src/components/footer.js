@@ -1,6 +1,11 @@
-export default function footer(data){
+import getData from "@/API/getdata";
+
+export default function footer(){
     (async()=>{
-        const [logo] = await data;
+        const GET_logo = await getData({
+            category: 'logo'
+        })
+        const [logo] = GET_logo;
         const img = document.querySelector('footer .cpyright img');
         img.src = logo.galeryImage[0];
     })();
@@ -40,8 +45,10 @@ export default function footer(data){
                     <p>Join Our Mailing List</p>
                     <div class="title">GET 15% OFF AND ENJOY SALES PERKS ON YOUR FIRST ORDER.</div>
                     <p>Email Address *</p>
-                    <input type="text">
-                    <button>Submit</button>
+                    <div class="email">
+                        <input type="text">
+                        <button>Submit</button>
+                    </div>
                 </div>
                 <div class="footer-list-item">
                     <div class="title">SOCIAL</div>

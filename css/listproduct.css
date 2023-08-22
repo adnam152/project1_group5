@@ -1,0 +1,36 @@
+
+.list-item-container .list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product {
+    position: relative;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.product .label {
+    background-color: var(--re);
+    color: white;
+    width: max-content;
+    padding: 0 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product img {
+    width: 200px;
+    height: calc(100% - 60px);
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-weight: 900;
+    font-size: 18px;
+}

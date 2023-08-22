@@ -1,16 +1,21 @@
-import home_RenderListImage from "./home_listimage";
+import getData from "@/API/getdata";
+import renderlistimage from "./renderlistimage";
 
-export default function content1(data) {
+export default function content1() {
     (async () => {
-        const allDataContent1 = await data;
-        const data_listImage = allDataContent1.filter(item => item.category == 'sell');
-
+        const GET_listImage = await getData({
+            category: 'products',
+            status: 'sale'
+        });
+        const GET_contentImg = await getData({
+                category: ['content-img', 'slide-img']
+        })
         // render - hover
         const listItemContainer = document.querySelector('#homepage .content1 .list-item-container .list-item');
-        home_RenderListImage(data_listImage, listItemContainer);
+        renderlistimage(GET_listImage, listItemContainer);
         //Scroll
         (() => {
-            const data_content = allDataContent1.find(item => item.name == 'Content1-Img');
+            const data_content = GET_contentImg.find(item => item.name == 'Content1-Img');
             const images = document.querySelectorAll('#homepage .content1 .content1-img');
             images.forEach((img, index) => {
                 img.src = data_content.galeryImage[index];
@@ -28,7 +33,7 @@ export default function content1(data) {
         (() => {
             // Show img
             const slideContainer = document.querySelector('#homepage .content1 .slide .container-slide-img');
-            const slideData = allDataContent1.find(item => item.name == 'Slide-Img');
+            const slideData = GET_contentImg.find(item => item.name == 'Slide-Img');
             const htmls = slideData.galeryImage.map(link => `
                 <div class="slide-group">
                     <img src="${link}" alt="">
@@ -82,7 +87,7 @@ export default function content1(data) {
                     <h1>OUR DENIM WILL MAKE WORKING FROM WORK FEEL JUST LIKE WORKING FROM HOME.</h1>
                     <p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a
                         story and let your users know a little more about you.</p>
-                    <button>Shop All Denim</button>
+                    <a href="/products"><button>Shop All Denim</button></a>
                 </div>
                 <img src="" alt="" class="content1-img">
             </div>
@@ -91,7 +96,7 @@ export default function content1(data) {
                 <img src="" alt="" class="img-left grid-center content1-img">
                 <div class="slide">
                     <div class="container-slide-img"></div>
-                    <button>Shop Now</button>
+                    <a href="/products"><button>Shop Now</button></a>
                     <div class="dot">
                         <div class="circle"></div>
                         <div class="circle"></div>
@@ -102,7 +107,7 @@ export default function content1(data) {
                     <h1 class="title">EARTH-FRIENDLY AND LASTING</h1>
                     <p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a
                         story and let your users know a little more about you.</p>
-                    <button>Learn More</button>
+                    <a href="/products"><button>Learn More</button></a>
                 </div>
             </div>
         </div>

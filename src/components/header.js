@@ -1,9 +1,13 @@
+import getData from "@/API/getdata";
 import storage from "@/data/localstorage";
 
-export default function header(data) {
+export default function header() {
     const currentUser = storage.GET_localstorage();
     (async () => {
-        const [logo] = await data;
+        const GET_logo = await getData({
+            category: 'logo'
+        })
+        const [logo] = GET_logo;
         const link = logo.galeryImage[0];
         const logoImg = document.querySelector('.header_logo img');
         logoImg.src = link;
@@ -68,26 +72,26 @@ export default function header(data) {
             <ul class="header_right_parents-menu">
                 <li><div class="title">Women</div>
                     <ul class="header_right_children-menu">
-                    <a href="/"><li class="option">Women's New Arrivals</li></a>
-                    <a href="/"><li class="option">Women's Best Sellers</li></a>
-                    <a href="/"><li class="option">Women's Jeans</li></a>
-                    <a href="/"><li class="option">Women's Shorts</li></a>
-                    <a href="/"><li class="option">Women's Jackets</li></a>
-                    <a href="/"><li class="option">Skirts</li></a>
+                    <a href="/products"><li class="option">Women's New Arrivals</li></a>
+                    <a href="/products"><li class="option">Women's Best Sellers</li></a>
+                    <a href="/products"><li class="option">Women's Jeans</li></a>
+                    <a href="/products"><li class="option">Women's Shorts</li></a>
+                    <a href="/products"><li class="option">Women's Jackets</li></a>
+                    <a href="/products"><li class="option">Skirts</li></a>
                     </ul>
                 </li>
                 <li><div class="title">Men</div>
                     <ul class="header_right_children-menu">
-                    <a href="/"><li class="option">Men's New Arrivals</li></a>
-                    <a href="/"><li class="option">Men's Best Sellers</li></a>
-                    <a href="/"><li class="option">Men's Jeans</li></a>
-                    <a href="/"><li class="option">Men's Shorts</li></a>
-                    <a href="/"><li class="option">Men's Jackets</li></a>
+                    <a href="/products"><li class="option">Men's New Arrivals</li></a>
+                    <a href="/products"><li class="option">Men's Best Sellers</li></a>
+                    <a href="/products"><li class="option">Men's Jeans</li></a>
+                    <a href="/products"><li class="option">Men's Shorts</li></a>
+                    <a href="/products"><li class="option">Men's Jackets</li></a>
                     </ul>
                 </li>
-                <li><div class="title">Accessories</div></li>
-                <li><div class="title">Discover</div></li>
-                <li><div class="title">Clearance</div></li>
+                <a href="/products"><li><div class="title">Accessories</div></li></a>
+                <a href="/products"><li><div class="title">Discover</div></li></a>
+                <a href="/products"><li><div class="title">Clearance</div></li></a>
             </ul>
             </div>
             <div class="header_absolute_left">

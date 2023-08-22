@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export default async function getData(params){
-    let data = await axios.get('',{
+export default async function getData(params, limit = ''){
+    let data = await axios.get(`?${limit}`,{
         params : params
     });
     return data.data;

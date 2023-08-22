@@ -1,5 +1,5 @@
 const KEY = 'WORKSHOP_USER';
-const storage = {
+const storageUser = {
     GET_localstorage() {
         return JSON.parse(localStorage.getItem(KEY));
     },
@@ -10,4 +10,4 @@ const storage = {
         localStorage.removeItem(KEY);
     }
 }
-export default storage
+export default storageUser

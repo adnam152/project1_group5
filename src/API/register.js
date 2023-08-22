@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import addUser from "./adduser";
 import getUser from "./getusers";
-import storage from "@/data/localstorage";
+import storageUser from "@/data/localstorage";
 import alertMessage from "@/components/alert";
 
 const notEmpty = function () {
@@ -105,13 +105,13 @@ export default async function register() {
                     password: password.value,
                 }
                 addUser(data);
-                storage.SET_localstorage({
+                storageUser.SET_localstorage({
                     username: data.username
                 });
                 alertMessage('Success','Sign up Successful')
                 setTimeout(function(){
                     location.reload();
-                },1000)
+                },500)
             }else alertMessage('Fail','Username already exists')
         }
     }

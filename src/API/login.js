@@ -1,6 +1,6 @@
 import alertMessage from "@/components/alert";
 import getUser from "./getusers";
-import storage from "@/data/localstorage";
+import storageUser from "@/data/localstorage";
 
 export default function login(){
     const submitBtn = document.querySelector('#form-modal #submit_login');
@@ -13,7 +13,7 @@ export default function login(){
         const [user] = await getUser(username,passWord);
 
         if(user){
-            storage.SET_localstorage({
+            storageUser.SET_localstorage({
                 username: user.username
             })
             if(user.username == 'administrator'){

@@ -1,0 +1,129 @@
+main#all_products{
+    margin-bottom: 50px;
+}
+
+.all-banner {
+    display: grid;
+    grid-template-columns: repeat(2, calc(40% - 10px)) 20%;
+    gap: 10px;
+    grid-template-rows: 550px;
+    color: var(--bl);
+}
+.all-banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.all-banner .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0effb;
+}
+.all-banner .text >div{
+    width: 400px;
+}
+.all-banner .text h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.all-banner .text p{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.all-banner .img{
+    position: relative;
+}
+.all-banner .img .label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 130px;
+    background-color: var(--re);
+    padding: 15px;
+    display: flex;
+    align-items: end;
+}
+.all-banner .img .label p{
+    color: white;
+    font-weight: bold;
+}
+.all-banner .img .label .discount{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--bl);
+    color: white;
+    padding: 8px 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+main#all_products .content{
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-column-gap: 20px;
+    position: relative;
+}
+main#all_products .filter{
+    min-width: 200px;
+    height: max-content;
+    position: sticky;
+    top: 30px;
+}
+main#all_products .filter ul{
+    padding: 10px;
+}
+main#all_products .filter ul li{
+    padding: 5px 0;
+    cursor: pointer;
+    transition: 0.1s;
+}
+main#all_products .filter ul li:hover{
+    text-decoration: underline;
+    color: rgb(27, 27, 195);
+    font-size: 20px;
+}
+main#all_products .filter ul li.active{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    color: rgb(27, 27, 195);
+}
+
+
+
+main#all_products .list-products{
+    display: flex;
+    flex-wrap: wrap;
+}
+main#all_products .paging{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+main#all_products .paging button{
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 3px;
+    background-color: white;
+    color: var(--bl);
+    border: 1px solid var(--bl);
+    transition: 0.2s;
+}
+
+main#all_products .paging button:hover{
+    color: white;
+    background-color: var(--bl);
+}
+main#all_products .paging button.active{
+    color: white;
+    background-color: var(--bl);
+}

@@ -38,11 +38,18 @@ footer p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-footer input,
-button {
+footer .email{
+    display: flex;
+    align-items: center;
+}
+footer input{
     padding: 7px 12px;
 }
-
+footer button{
+    padding: 8px 12px;
+    margin-left: 10px;
+    font-size: 16px;
+}
 .container-pay {
     display: flex;
     align-items: center;

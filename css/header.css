@@ -7,7 +7,6 @@ header {
     height: 80px;
     width: 100%;
     background-color: rgb(221, 219, 219);
-    margin-bottom: 50px;
 }
 
 .header_left {
@@ -48,6 +47,11 @@ header {
     display: flex;
     gap: 30px;
     font-weight: bolder;
+}
+
+header .header_right_parents-menu >a{
+    display: flex;
+    align-items: center;
 }
 
 .header_right_parents-menu >li {

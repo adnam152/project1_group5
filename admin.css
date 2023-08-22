@@ -104,3 +104,16 @@ button.delete{
     width: 200px;
     overflow-x: hidden;
 }
+/* ----------------------- */
+
+.add_one_link{
+    background-color: #cccc;
+    padding: 7px 12px;
+    width: max-content;
+    cursor: pointer;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.add_one_link.focus{
+    padding: 2px 0;
+    background-color: none;
+}

@@ -6,7 +6,6 @@ import {render, router} from "./utilities";
 import axios from "axios";
 import productsDetailPage from "./pages/productdetailpage";
 import API_products from "./API/API_products";
-import connectData from "./data/connectdata";
 
 axios.defaults.baseURL = API_products;
 

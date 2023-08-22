@@ -1,18 +1,25 @@
-import home_RenderListImage from "./home_listimage";
+import getData from "@/API/getdata";
+import renderlistimage from "./renderlistimage";
 
-export default function content2(data) {
+export default function content2() {
     (async () => {
-        const allDataContent2 = await data;
-        const data_listImage = allDataContent2.filter(item => item.category == 'new' || item.category == 'new-label');
+        const GET_listImage = await getData({
+            category: 'products',
+            status: ['new', 'new arrival']
+        })
+        const GET_backgroundImg = await getData({
+            category: 'background'
+        })
 
         const bg1 = document.querySelector('#homepage .content2 .bg1 img');
         const bg2 = document.querySelector('#homepage .content2 .bg2 img');
-        bg1.src = allDataContent2.find(item => item.name == 'Background Content 2').galeryImage[1];
-        bg2.src = allDataContent2.find(item => item.name == 'Background Content 2').galeryImage[0];
+        const [backgroundImg] = GET_backgroundImg;
+        bg1.src = backgroundImg.galeryImage[1];
+        bg2.src = backgroundImg.galeryImage[0];
 
         // render - hover
         const listItemContainer = document.querySelector('#homepage .content2 .list-item-container .list-item');
-        home_RenderListImage(data_listImage, listItemContainer);
+        renderlistimage(GET_listImage, listItemContainer);
 
         // scroll
         window.addEventListener('scroll', ()=> {
@@ -35,7 +42,7 @@ export default function content2(data) {
                                 tell a
                                 story and let your users know a little more about you.</p>
                         </div>
-                        <button>Shop All Denim</button>
+                        <a href="/products"><button>Shop All Denim</button></a>
                     </div>
                     <div class="list-item">
                         <!-- Js -->
