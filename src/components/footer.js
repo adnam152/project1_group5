@@ -69,7 +69,7 @@ export default function footer(){
                 </div>
             </div>
             <div class="cpyright">
-                <p>© 2035 by Deni. Powered and secured by Wix</p>
+                <p>© 2035 by TuanNam Powered and secured by Group 2</p>
                 <img src="" alt="">
             </div>
         </footer>

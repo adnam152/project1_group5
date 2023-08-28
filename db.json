@@ -3,13 +3,17 @@
     {
       "galeryImage": [
         "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441185/Workshop1/qkmvqyuslyhh67barlcs.webp",
-        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441186/Workshop1/ecpgjmv6puxdtpgwvvti.webp"
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1690441186/Workshop1/ecpgjmv6puxdtpgwvvti.webp",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1692792197/Workshop1/ur0asmcjskiiyeun6vry.jpg",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1692792256/Workshop1/qhwdljf5s8ojrez7tv6n.jpg",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1692792257/Workshop1/gtjqx7arlfhvqsnz2kkh.jpg",
+        "http://res.cloudinary.com/dzkdgm4c7/image/upload/v1692792257/Workshop1/pxzdtewifr3gizfssywh.jpg"
       ],
       "name": "Straight Leg Jean",
       "price": "$99.00",
       "category": "products",
       "status": "sale",
-      "description": "",
+      "description": "Đảm bảo an toàn, chất lượng, cam kết hàng chính hãng",
       "id": "77c87cff-7ad6-42bf-9bfa-06658d1a03a5"
     },
     {
