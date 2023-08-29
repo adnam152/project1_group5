@@ -2,6 +2,7 @@ import getOneProduct from "@/API/getone";
 import renameTitle from "./title";
 import getData from "@/API/getdata";
 import renderListImage from "./renderlistimage";
+import alertMessage from "./alert";
 
 export default function component_ProductDetail({
   id
@@ -47,19 +48,15 @@ export default function component_ProductDetail({
       const error = document.querySelector('#product-detail .infor .error');
 
       // size,color
-      allColors.forEach( function (color) {
+      allColors.forEach(function (color) {
         color.onclick = function () {
-          allColors.forEach( function (colors) {
-            colors.classList.remove('active');
-          })
+          document.querySelector('#product-detail .flex-colum .color button.active')?.classList.remove('active');
           this.classList.add('active');
         }
       })
-      allSize.forEach( function (size) {
+      allSize.forEach(function (size) {
         size.onclick = function () {
-          allSize.forEach( function (sizes) {
-            sizes.classList.remove('active');
-          })
+          document.querySelector('#product-detail .flex-colum .size button.active')?.classList.remove('active');
           this.classList.add('active');
         }
       })
@@ -98,19 +95,24 @@ export default function component_ProductDetail({
         value.value = value.value.replace(/\D/g, '');
       }
       // add cart, bought
-      function checkProduct(valid){
-        for (let i = 0; i < valid.length; i++) {
-         return valid[i].classList.contains('active')
-        }
-      }
+      // function checkProduct(valid) {
+      //   for (let i = 0; i < valid.length; i++) {
+      //     return valid[i].classList.contains('active')
+      //   }
+      // }
       addCart.onclick = () => {
-        if(checkProduct(allColors) && checkProduct(allSize)) {
-          console.log('Sản phẩm đã được thêm vào giỏ hàng')
-        } else {
-          error.innerHTML = "Vui lòng chọn size và màu sản phẩm"
+        let tempColor = document.querySelector('#product-detail .flex-colum .color button.active');
+        let tempSize = document.querySelector('#product-detail .flex-colum .size button.active');
+        // if (checkProduct(allColors) && checkProduct(allSize)) {
+        //   console.log('Sản phẩm đã được thêm vào giỏ hàng')
+        // } 
+        if(tempColor && tempSize){
+          alertMessage('Success','Add successfully');
+        }
+        else {
+          alertMessage('Fail','Please choose size and color');
         }
       }
-      console.log(checkProduct(allColors), checkProduct(allSize));
     })()
   })();
   return `
