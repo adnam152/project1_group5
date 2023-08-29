@@ -116,9 +116,9 @@ export default function component_ProductDetail({
     })()
   })();
   return `
-    <div id="coallSizentainerProductDetail">
+    <div id="containerProductDetail">
     <div id="sourceProductDetail"><a href="#"> HomePage > </a><a href="/products" class="list"></a> <span class = "status"> > </span><span class = "name"> > </span></div>
-    <main id="product-detail">
+    <div id="product-detail">
       <div class="container-img">
         <img src="" class="large-img" alt="">
         <div class="scrollImage">
@@ -193,7 +193,7 @@ export default function component_ProductDetail({
         </div>
         
       </div>
-    </main>
+    </div>
     <div class="Product-Description">
       <h2 class="title">Product Description</h2>
       <div class="Description-content"></div>
