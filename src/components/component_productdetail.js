@@ -1,6 +1,7 @@
 import getOneProduct from "@/API/getone";
 import renameTitle from "./title";
-import relatedProduct from "./related products";
+import getData from "@/API/getdata";
+import renderListImage from "./renderlistimage";
 
 export default function component_ProductDetail({
   id
@@ -14,7 +15,12 @@ export default function component_ProductDetail({
     const statusProduct = document.querySelector('#sourceProductDetail .status');
     const nameProductDetail = document.querySelector('#sourceProductDetail .name');
     const priceProductDetail = document.querySelector('#product-detail .infor .priceDetail');
-    const container = document.querySelector('.Product-Description .Description-content');
+    // related product
+    const dataRelated = await getData({
+      status: product.status
+    }, 5);
+    const related = document.querySelector('.related-products .list-products')
+    renderListImage(dataRelated, related)
 
     renameTitle(`Clothing Shop - ${product.name}`);
     imageDetail.src = product.galeryImage[0];
@@ -35,11 +41,31 @@ export default function component_ProductDetail({
       const minusBtn = document.querySelector('.form-count #minus');
       const input = document.querySelector('.form-count input');
       const container = document.querySelector('.Product-Description .Description-content');
+      const allColors = document.querySelectorAll('#product-detail .flex-colum .color button');
+      const allSize = document.querySelectorAll('#product-detail .flex-colum .size button');
+      const addCart = document.querySelector('#product-detail .bought #add');
+      const error = document.querySelector('#product-detail .infor .error');
 
-
+      // size,color
+      allColors.forEach( function (color) {
+        color.onclick = function () {
+          allColors.forEach( function (colors) {
+            colors.classList.remove('active');
+          })
+          this.classList.add('active');
+        }
+      })
+      allSize.forEach( function (size) {
+        size.onclick = function () {
+          allSize.forEach( function (sizes) {
+            sizes.classList.remove('active');
+          })
+          this.classList.add('active');
+        }
+      })
       // render description
       container.innerHTML = `${product.description == '' ? 'There is no product description available' : product.description}`;
-    // hover next, prev
+      // hover next, prev
       btnNext.onclick = () => {
         imageProduct.scrollLeft += widthImg;
       }
@@ -71,10 +97,24 @@ export default function component_ProductDetail({
         const value = e.target;
         value.value = value.value.replace(/\D/g, '');
       }
+      // add cart, bought
+      function checkProduct(valid){
+        for (let i = 0; i < valid.length; i++) {
+         return valid[i].classList.contains('active')
+        }
+      }
+      addCart.onclick = () => {
+        if(checkProduct(allColors) && checkProduct(allSize)) {
+          console.log('Sản phẩm đã được thêm vào giỏ hàng')
+        } else {
+          error.innerHTML = "Vui lòng chọn size và màu sản phẩm"
+        }
+      }
+      console.log(checkProduct(allColors), checkProduct(allSize));
     })()
   })();
   return `
-    <div id="containerProductDetail">
+    <div id="coallSizentainerProductDetail">
     <div id="sourceProductDetail"><a href="#"> HomePage > </a><a href="/products" class="list"></a> <span class = "status"> > </span><span class = "name"> > </span></div>
     <main id="product-detail">
       <div class="container-img">
@@ -98,13 +138,13 @@ export default function component_ProductDetail({
           </div>
           <div class="color flex">
             <label class="category">Color</label>
-            <button class="active">Grey</button>
+            <button>Grey</button>
             <button>Pink</button>
             <button>Green</button>
           </div>
           <div class="size flex">
             <label class="category">Size</label>
-            <button class="active">S</button>
+            <button>S</button>
             <button>M</button>
             <button>L</button>
           </div>
@@ -144,6 +184,7 @@ export default function component_ProductDetail({
             Free shipping
           </div>
         </div>
+        <div class="error"></div>
         <div class="bought">
           <button id="add"> <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
           <button id="buy">Buy now</button>
@@ -152,8 +193,15 @@ export default function component_ProductDetail({
       </div>
     </main>
     <div class="Product-Description">
-      <div class="title">Product Description</div>
+      <h2 class="title">Product Description</h2>
       <div class="Description-content"></div>
+    </div>
+    <div class="related-products">
+      <div class="title">
+        <h2>OTHER PRODUCTS OF THE SHOP</h2>
+        <a href="/products">See all <i class="fa-solid fa-arrow-right-long"></i></a>
+      </div>
+      <div class="list-products"></div>
     </div>
   </div>
     `
