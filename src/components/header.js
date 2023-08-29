@@ -107,8 +107,10 @@ export default function header() {
                 <span>Wishlist</span>
             </div>
             <div class="header_absolute_right_cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>0</span>
+                <a href="/cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
             </div>
             </div>
         </header>

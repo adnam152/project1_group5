@@ -3,10 +3,12 @@ import renameTitle from "./title";
 import getData from "@/API/getdata";
 import renderListImage from "./renderlistimage";
 import alertMessage from "./alert";
+import createCartUsers from "@/API/createCartUsers";
 
 export default function component_ProductDetail({
   id
-}) {
+}) 
+  {
   (async () => {
     const product = await getOneProduct(id);
     const imageDetail = document.querySelector('.container-img img');
@@ -96,8 +98,18 @@ export default function component_ProductDetail({
       addCart.onclick = () => {
         let tempColor = document.querySelector('#product-detail .flex-colum .color button.active');
         let tempSize = document.querySelector('#product-detail .flex-colum .size button.active');
+        let cartProducts = {
+          galeryImage: [product.galeryImage],
+          name : product.name,
+          price : product.price,
+          status : product.status,
+          description : product.description,
+          id : product.id,
+        }
         if(tempColor && tempSize){
-          alertMessage('Success','Add successfully');
+          alertMessage('Success','The product has been added to cart')
+          createCartUsers(product.id,cartProducts);
+          console.log(createCartUsers(product.id, cartProducts));
         }
         else {
           alertMessage('Fail','Please choose size and color');
