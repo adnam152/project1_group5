@@ -10,9 +10,7 @@ export default function productsDetailPage(data) {
     <div id="product_detail">
         ${loginForm()}
         ${header()}
-        <main>
-            ${component_ProductDetail(data)}
-        </main>
+        ${component_ProductDetail(data)}
         ${footer()}
     </div>
     `

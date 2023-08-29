@@ -45,7 +45,6 @@ export default function component_ProductDetail({
       const allColors = document.querySelectorAll('#product-detail .flex-colum .color button');
       const allSize = document.querySelectorAll('#product-detail .flex-colum .size button');
       const addCart = document.querySelector('#product-detail .bought #add');
-      const error = document.querySelector('#product-detail .infor .error');
 
       // size,color
       allColors.forEach(function (color) {
@@ -94,18 +93,9 @@ export default function component_ProductDetail({
         const value = e.target;
         value.value = value.value.replace(/\D/g, '');
       }
-      // add cart, bought
-      // function checkProduct(valid) {
-      //   for (let i = 0; i < valid.length; i++) {
-      //     return valid[i].classList.contains('active')
-      //   }
-      // }
       addCart.onclick = () => {
         let tempColor = document.querySelector('#product-detail .flex-colum .color button.active');
         let tempSize = document.querySelector('#product-detail .flex-colum .size button.active');
-        // if (checkProduct(allColors) && checkProduct(allSize)) {
-        //   console.log('Sản phẩm đã được thêm vào giỏ hàng')
-        // } 
         if(tempColor && tempSize){
           alertMessage('Success','Add successfully');
         }
@@ -116,7 +106,7 @@ export default function component_ProductDetail({
     })()
   })();
   return `
-    <div id="coallSizentainerProductDetail">
+    <div id="containerProductDetail">
     <div id="sourceProductDetail"><a href="#"> HomePage > </a><a href="/products" class="list"></a> <span class = "status"> > </span><span class = "name"> > </span></div>
     <main id="product-detail">
       <div class="container-img">

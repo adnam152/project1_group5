@@ -225,3 +225,6 @@ main#product-detail .Customer-benefits i {
 #containerProductDetail .related-products .list-products a {
     margin-right: 39px;
 }
+#containerProductDetail .related-products .list-products {
+    display: flex;
+}
