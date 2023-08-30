@@ -109,7 +109,7 @@ export default function header() {
             <div class="header_absolute_right_cart">
                 <a href="/cart">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span>0</span>
+                    <span class="quantity">${currentUser?.cart.length || 0}</span>
                 </a>
             </div>
             </div>

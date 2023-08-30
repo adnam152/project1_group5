@@ -3,12 +3,10 @@ import renameTitle from "./title";
 import getData from "@/API/getdata";
 import renderListImage from "./renderlistimage";
 import alertMessage from "./alert";
-import createCartUsers from "@/API/createCartUsers";
+import storageUser from "@/data/localstorage";
+import userCart from "@/API/usercart";
 
-export default function component_ProductDetail({
-  id
-}) 
-  {
+export default function component_ProductDetail({id}) {
   (async () => {
     const product = await getOneProduct(id);
     const imageDetail = document.querySelector('.container-img img');
@@ -22,7 +20,8 @@ export default function component_ProductDetail({
     const dataRelated = await getData({
       status: product.status
     }, 5);
-    const related = document.querySelector('.related-products .list-products')
+    // .list-item-container .list-item
+    const related = document.querySelector('.list-item-container .list-item')
     renderListImage(dataRelated, related)
 
     renameTitle(`Clothing Shop - ${product.name}`);
@@ -95,24 +94,29 @@ export default function component_ProductDetail({
         const value = e.target;
         value.value = value.value.replace(/\D/g, '');
       }
-      addCart.onclick = () => {
+      addCart.onclick = async () => {
         let tempColor = document.querySelector('#product-detail .flex-colum .color button.active');
         let tempSize = document.querySelector('#product-detail .flex-colum .size button.active');
-        let cartProducts = {
-          galeryImage: [product.galeryImage],
-          name : product.name,
-          price : product.price,
-          status : product.status,
-          description : product.description,
-          id : product.id,
-        }
-        if(tempColor && tempSize){
-          alertMessage('Success','The product has been added to cart')
-          createCartUsers(product.id,cartProducts);
-          console.log(createCartUsers(product.id, cartProducts));
+        if (tempColor && tempSize) {
+          if (storageUser.GET_localstorage()) {
+            const color = tempColor.getAttribute('data-color');
+            const size = tempSize.getAttribute('data-size');
+            const quantity = input.value;
+            const userProduct = {
+              productId: product.id,
+              color,
+              size,
+              quantity
+            }
+            userCart().SET(userProduct);
+            alertMessage('Success', 'The product has been added to cart');
+          }else{
+            alertMessage('Fail','Login First');
+            document.querySelector('header .header_left_Log-in .unloged').click();
+          }
         }
         else {
-          alertMessage('Fail','Please choose size and color');
+          alertMessage('Fail', 'Please choose size and color');
         }
       }
     })()
@@ -142,15 +146,15 @@ export default function component_ProductDetail({
           </div>
           <div class="color flex">
             <label class="category">Color</label>
-            <button>Grey</button>
-            <button>Pink</button>
-            <button>Green</button>
+            <button data-color="Grey">Grey</button>
+            <button data-color="Pink">Pink</button>
+            <button data-color="Green">Green</button>
           </div>
           <div class="size flex">
             <label class="category">Size</label>
-            <button>S</button>
-            <button>M</button>
-            <button>L</button>
+            <button data-size="S">S</button>
+            <button data-size="M">M</button>
+            <button data-size="L">L</button>
           </div>
           <div class="count flex">
             <label class="category">Count</label>
@@ -200,12 +204,12 @@ export default function component_ProductDetail({
       <h2 class="title">Product Description</h2>
       <div class="Description-content"></div>
     </div>
-    <div class="related-products">
+    <div class="list-item-container">
       <div class="title">
         <h2>OTHER PRODUCTS OF THE SHOP</h2>
         <a href="/products">See all <i class="fa-solid fa-arrow-right-long"></i></a>
       </div>
-      <div class="list-products"></div>
+      <div class="list-item"></div>
     </div>
   </div>
     `

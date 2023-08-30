@@ -103,10 +103,13 @@ export default async function register() {
                     username: username.value,
                     email: email.value,
                     password: password.value,
+                    cart: []
                 }
                 addUser(data);
                 storageUser.SET_localstorage({
-                    username: data.username
+                    username: data.username,
+                    id: data.id,
+                    cart: []
                 });
                 alertMessage('Success','Sign up Successful')
                 setTimeout(function(){

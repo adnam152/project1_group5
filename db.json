@@ -507,13 +507,22 @@
       "id": "4c747da4-4eb9-41eb-9028-1d8cb14e8a1a",
       "username": "administrator",
       "email": "teddy.nam152@gmail.com",
-      "password": "admin123"
+      "password": "admin123",
+      "cart": []
     },
     {
-      "id": "4f191302-2836-4380-b4ea-ba62e8d8880e",
+      "id": "88d92c8c-5d41-4c92-bf6d-566ba2340fdd",
       "username": "adnam123",
       "email": "teddy.nam152@gmail.com",
-      "password": "adnam123"
+      "password": "adnam123",
+      "cart": [
+        {
+          "productId": "27a6d326-0652-4240-8b85-b18dd783108a",
+          "color": "Pink",
+          "size": "M",
+          "quantity": "1"
+        }
+      ]
     }
   ]
 }

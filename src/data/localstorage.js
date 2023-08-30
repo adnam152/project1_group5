@@ -3,8 +3,8 @@ const storageUser = {
     GET_localstorage() {
         return JSON.parse(localStorage.getItem(KEY));
     },
-    SET_localstorage(user) {
-        localStorage.setItem(KEY, JSON.stringify(user));
+    SET_localstorage(data) {
+        localStorage.setItem(KEY, JSON.stringify(data));
     },
     REMOVE_localstorage(){
         localStorage.removeItem(KEY);
