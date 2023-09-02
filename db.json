@@ -517,10 +517,10 @@
       "password": "adnam123",
       "cart": [
         {
-          "productId": "27a6d326-0652-4240-8b85-b18dd783108a",
-          "color": "Pink",
-          "size": "M",
-          "quantity": "1"
+          "productId": "7f4227a5-b803-4213-bdda-baf53876016c",
+          "color": "Green",
+          "size": "S",
+          "quantity": 1
         }
       ]
     }

@@ -35,12 +35,32 @@
     padding: 7px 12px;
     text-align: center;
 }
+
+#cartPage table tr td:nth-child(5){
+    width: 250px;
+}
+#cartPage table tr td:nth-child(6){
+    width: 100px;
+}
 #cartPage table th:first-child{
     width: 350px;
 }
-#cartPage table th:nth-child(5){
-    width: 300px;
-}
 #cartPage table button{
     padding: 5px 15px;
+}
+#cartPage table input{
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 50px;
+}
+/* --------- */
+#cartPage table .increase, #cartPage table .reduce{
+    padding: 5px 15px;
+    cursor: pointer;
+}
+#cartPage table .total-price input{
+    text-align:left;
 }
