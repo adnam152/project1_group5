@@ -72,7 +72,7 @@ export default function cartPageComponent() {
                     quantity
                 }
                 userCart().SET(product, 'update');
-                
+
                 const price = getPrice(thisRow.querySelector('.price').getAttribute('data-price'));
                 const moneyElement = thisRow.querySelector('.money');
                 moneyElement.setAttribute('data-money',price*quantity);
@@ -80,19 +80,19 @@ export default function cartPageComponent() {
                 totalPrice();
             }
             if (thisNode.className == 'reduce') {
-                const quantity = thisRow.querySelector('.quantity');
-                let quantityValue = parseInt(quantity.value);
+                const quantityElement = thisRow.querySelector('.quantity');
+                let quantityValue = parseInt(quantityElement.value);
                 if (quantityValue > 1) {
                     quantityValue--;
-                    quantity.value = quantityValue;
+                    quantityElement.value = quantityValue;
                     updateQuantity(quantityValue);
                 };
             }
             if (thisNode.className == 'increase') {
-                const quantity = thisRow.querySelector('.quantity');
-                let quantityValue = parseInt(quantity.value);
+                const quantityElement = thisRow.querySelector('.quantity');
+                let quantityValue = parseInt(quantityElement.value);
                 quantityValue++;
-                quantity.value = quantityValue;
+                quantityElement.value = quantityValue;
                 updateQuantity(quantityValue);
             }
         }
