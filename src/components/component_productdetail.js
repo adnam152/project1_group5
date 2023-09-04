@@ -18,7 +18,7 @@ export default function component_ProductDetail({id}) {
     const priceProductDetail = document.querySelector('#product-detail .infor .priceDetail');
     // related product
     const dataRelated = await getData({
-      galeryImage: product.galeryImage,
+      category: product.category,
       status: product.status
     }, 5);
     // .list-item-container .list-item
