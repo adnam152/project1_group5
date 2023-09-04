@@ -3,6 +3,10 @@ import storage from "@/data/localstorage";
 
 export default function header() {
     const currentUser = storage.GET_localstorage();
+    let length = 0;
+    if(currentUser){
+        length = currentUser.cart.length
+    }
     (async () => {
         const GET_logo = await getData({
             category: 'logo'
@@ -109,7 +113,7 @@ export default function header() {
             <div class="header_absolute_right_cart">
                 <a href="/cart">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="quantity">0</span>
+                    <span class="quantity">${length}</span>
                 </a>
             </div>
             </div>
